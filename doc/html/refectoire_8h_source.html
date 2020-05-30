@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UpTower:  Fichier source de src/pieces/refectoire.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UpTower
+   </div>
+   <div id="projectbrief">Création d&#39;un jeu de gestion pour l&#39;UE LIFAP4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Recherche');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34caaf82b25d83e62b370a0c6fbb4fdf.html">pieces</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">refectoire.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="refectoire_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef REFECTOIRE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define REFECTOIRE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="piece_8h.html">piece.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_refectoire.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_refectoire.html">Refectoire</a> : <span class="keyword">public</span> <a class="code" href="class_piece.html">Piece</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_refectoire.html#a03e0fca09f036e7ad57e89c7be672860">Refectoire</a>(<span class="keywordtype">int</span> y_,<span class="keywordtype">int</span> x_,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> niveau_ = 1,<span class="keywordtype">bool</span> asc_ = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_refectoire.html#a44da160208ff543f90942dc034364874">~Refectoire</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_refectoire.html#a2b9877c2d16af9d1282a63aa32c2510e">getProduction</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_refectoire.html#a8ac183131e7f1f3886b9b2803129d59a">setTexture</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tex);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="apiece_8h_html"><div class="ttname"><a href="piece_8h.html">piece.h</a></div></div>
+<div class="ttc" id="aclass_refectoire_html"><div class="ttname"><a href="class_refectoire.html">Refectoire</a></div><div class="ttdoc">Refectoire est un piece, qui permet de produire de la nourriture.</div><div class="ttdef"><b>Definition:</b> refectoire.h:10</div></div>
+<div class="ttc" id="aclass_refectoire_html_a03e0fca09f036e7ad57e89c7be672860"><div class="ttname"><a href="class_refectoire.html#a03e0fca09f036e7ad57e89c7be672860">Refectoire::Refectoire</a></div><div class="ttdeci">Refectoire(int y_, int x_, unsigned int niveau_=1, bool asc_=false)</div><div class="ttdef"><b>Definition:</b> refectoire.cpp:3</div></div>
+<div class="ttc" id="aclass_refectoire_html_a2b9877c2d16af9d1282a63aa32c2510e"><div class="ttname"><a href="class_refectoire.html#a2b9877c2d16af9d1282a63aa32c2510e">Refectoire::getProduction</a></div><div class="ttdeci">unsigned int getProduction() const</div><div class="ttdoc">Accesseur : retourne la production de piece (utilie pour stat)</div><div class="ttdef"><b>Definition:</b> refectoire.cpp:17</div></div>
+<div class="ttc" id="aclass_refectoire_html_a8ac183131e7f1f3886b9b2803129d59a"><div class="ttname"><a href="class_refectoire.html#a8ac183131e7f1f3886b9b2803129d59a">Refectoire::setTexture</a></div><div class="ttdeci">void setTexture(unsigned int tex)</div><div class="ttdoc">Mutateur : modifie la texture de la piece.</div><div class="ttdef"><b>Definition:</b> refectoire.cpp:37</div></div>
+<div class="ttc" id="aclass_refectoire_html_a44da160208ff543f90942dc034364874"><div class="ttname"><a href="class_refectoire.html#a44da160208ff543f90942dc034364874">Refectoire::~Refectoire</a></div><div class="ttdeci">~Refectoire()</div><div class="ttdef"><b>Definition:</b> refectoire.cpp:13</div></div>
+<div class="ttc" id="aclass_piece_html"><div class="ttname"><a href="class_piece.html">Piece</a></div><div class="ttdoc">pieces composant le jeu</div><div class="ttdef"><b>Definition:</b> piece.h:15</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

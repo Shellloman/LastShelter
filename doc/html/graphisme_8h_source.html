@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UpTower:  Fichier source de src/outils/graphisme.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UpTower
+   </div>
+   <div id="projectbrief">Création d&#39;un jeu de gestion pour l&#39;UE LIFAP4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Recherche');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7d8cee288858badfd992cdfe4c81526f.html">outils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">graphisme.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="graphisme_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GRAPHISME</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GRAPHISME</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_image.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_ttf.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../pieces/piece.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../constante.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="construction_8h.html">construction.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stat_8h.html">stat.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../personnages/mouvement.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="alerte_8h.html">alerte.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../personnages/inventaire.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_graphisme.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_graphisme.html">Graphisme</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    SDL_Texture **T_Pieces,**T_Select,**T_Decor,**T_Stat,**T_Perso;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    SDL_Texture **ttf, *T_alerte;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    vector&lt;SDL_Texture*&gt; caract,V_perso,V_inv;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    SDL_Renderer *rendu;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    SDL_Rect rFond,rPiece,rCarte,rttf[14],sPerso[17],rAlerte,rCursor;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_piece.html">Piece</a> ** pieces;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    SDL_Color couleur;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    TTF_Font *police;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_alerte.html">Alerte</a>* alerte;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_graphisme.html#a15179e42e5a16c15b0f6ec7166f022c6">Graphisme</a>(SDL_Renderer *rendu_);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#af7687743686d93d1ca236101a452fcda">setPtr</a>(<a class="code" href="class_piece.html">Piece</a> **pieces_,<a class="code" href="class_alerte.html">Alerte</a>* alerte_);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#a9f47bd965473bb534238402f757076ea">setTexturePersonnage</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    SDL_Texture* <a class="code" href="class_graphisme.html#a42cb7aa7984d9de88816199f0e163689">Load</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* chemin);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#a4563e860bcd73cf59f9edc4e9bb49404">Affichage_jeu</a>(<a class="code" href="class_construction.html">Construction</a> &amp;batiment,SDL_Rect *tab);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#a157964de9ddb4d8427fefc8158c2804b">Afficher_menu_piece</a>(<a class="code" href="class_piece.html">Piece</a>* tmp, <a class="code" href="class_construction.html">Construction</a> &amp;batiment);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#ae613163200a89078dbdbd585b4b70603">Afficher_menu_construction</a>(<a class="code" href="class_construction.html">Construction</a> &amp;batiment);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#a5f51227484ffe755467874945c458215">Afficher_stat</a>(<a class="code" href="class_stat.html">Stat</a> &amp;stat,<span class="keywordtype">int</span> fps,<span class="keywordtype">bool</span> inv);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#a73ec340c2ae96f16f767adf26711c91f">Afficher_contour</a>(<a class="code" href="class_construction.html">Construction</a> &amp;batiment,SDL_Rect *tab);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#aac659800efe285bd92aa9cc9a77f2a30">Afficher_selection</a>(<a class="code" href="class_piece.html">Piece</a> *p,SDL_Rect *tab);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#ae3fd9da9811e295d0671e89f6ba33b8f">Afficher_perso</a>(vector&lt;Personnage*&gt; v,<a class="code" href="class_mouvement.html">Mouvement</a> &amp;mouv);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#ae4524829689cb2cbaa9c5b0cb8668d15">Afficher_caracteristique</a>(<a class="code" href="class_personnage.html">Personnage</a> *p_sel);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#a0c4c9b70a573a1f5af4ae5175411523f">Afficher_alerte</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#a36ec6e5e86512a87d2b02b4c54e5eb17">Afficher_inventaire</a>(<a class="code" href="class_inventaire.html">Inventaire</a>&amp; inv);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#ae868ba52f81f293c61ebf27808d023c8">Afficher_cursor</a>(<span class="keywordtype">int</span> y, <span class="keywordtype">int</span> x);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#a79b270eceef7542bc14fea81c46dce87">Afficher_choix</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    SDL_Texture* <a class="code" href="class_graphisme.html#a08790b893d5cb9de09072152cdd9d5f8">sautligne</a>(<span class="keywordtype">string</span> str,<span class="keywordtype">bool</span> taille_fixe);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    SDL_Texture* <a class="code" href="class_graphisme.html#af0724d41e31de4c3806492ae3293eed2">StringToTexture</a>(<span class="keywordtype">string</span> str);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    SDL_Texture * <a class="code" href="class_graphisme.html#a5658b8f0035538112dd8de06a3c262d6">CreateTexturePerso</a>(<a class="code" href="class_personnage.html">Personnage</a> * p);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    SDL_Rect&amp; <a class="code" href="class_graphisme.html#a74e6fb1f8ce20009742dab594ebacbbe">getRFond</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graphisme.html#ad89aee4b3b46c21626ae182d2699507e">clear</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_construction_html"><div class="ttname"><a href="class_construction.html">Construction</a></div><div class="ttdoc">gère les différentes pieces</div><div class="ttdef"><b>Definition:</b> construction.h:24</div></div>
+<div class="ttc" id="aclass_graphisme_html"><div class="ttname"><a href="class_graphisme.html">Graphisme</a></div><div class="ttdoc">affiche toutes les textures</div><div class="ttdef"><b>Definition:</b> graphisme.h:21</div></div>
+<div class="ttc" id="aclass_graphisme_html_a15179e42e5a16c15b0f6ec7166f022c6"><div class="ttname"><a href="class_graphisme.html#a15179e42e5a16c15b0f6ec7166f022c6">Graphisme::Graphisme</a></div><div class="ttdeci">Graphisme(SDL_Renderer *rendu_)</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:3</div></div>
+<div class="ttc" id="aalerte_8h_html"><div class="ttname"><a href="alerte_8h.html">alerte.h</a></div></div>
+<div class="ttc" id="aclass_graphisme_html_aac659800efe285bd92aa9cc9a77f2a30"><div class="ttname"><a href="class_graphisme.html#aac659800efe285bd92aa9cc9a77f2a30">Graphisme::Afficher_selection</a></div><div class="ttdeci">void Afficher_selection(Piece *p, SDL_Rect *tab)</div><div class="ttdoc">Affiche un coutour rouge sur la piece selectionnée.</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:191</div></div>
+<div class="ttc" id="aclass_alerte_html"><div class="ttname"><a href="class_alerte.html">Alerte</a></div><div class="ttdoc">Alerte affiche les messages d'alerte.</div><div class="ttdef"><b>Definition:</b> alerte.h:16</div></div>
+<div class="ttc" id="aclass_graphisme_html_a5658b8f0035538112dd8de06a3c262d6"><div class="ttname"><a href="class_graphisme.html#a5658b8f0035538112dd8de06a3c262d6">Graphisme::CreateTexturePerso</a></div><div class="ttdeci">SDL_Texture * CreateTexturePerso(Personnage *p)</div><div class="ttdoc">créer une texture aléatoire (parmis plusieurs choix) pour un personnage</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:409</div></div>
+<div class="ttc" id="aclass_graphisme_html_a157964de9ddb4d8427fefc8158c2804b"><div class="ttname"><a href="class_graphisme.html#a157964de9ddb4d8427fefc8158c2804b">Graphisme::Afficher_menu_piece</a></div><div class="ttdeci">void Afficher_menu_piece(Piece *tmp, Construction &amp;batiment)</div><div class="ttdoc">Affiche le menu de la piece sélectionnée.</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:231</div></div>
+<div class="ttc" id="aclass_graphisme_html_a74e6fb1f8ce20009742dab594ebacbbe"><div class="ttname"><a href="class_graphisme.html#a74e6fb1f8ce20009742dab594ebacbbe">Graphisme::getRFond</a></div><div class="ttdeci">SDL_Rect &amp; getRFond()</div><div class="ttdoc">retorune le SDL_Rect Rfond</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:513</div></div>
+<div class="ttc" id="aclass_graphisme_html_af0724d41e31de4c3806492ae3293eed2"><div class="ttname"><a href="class_graphisme.html#af0724d41e31de4c3806492ae3293eed2">Graphisme::StringToTexture</a></div><div class="ttdeci">SDL_Texture * StringToTexture(string str)</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:486</div></div>
+<div class="ttc" id="aclass_graphisme_html_ad89aee4b3b46c21626ae182d2699507e"><div class="ttname"><a href="class_graphisme.html#ad89aee4b3b46c21626ae182d2699507e">Graphisme::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:516</div></div>
+<div class="ttc" id="aclass_graphisme_html_af7687743686d93d1ca236101a452fcda"><div class="ttname"><a href="class_graphisme.html#af7687743686d93d1ca236101a452fcda">Graphisme::setPtr</a></div><div class="ttdeci">void setPtr(Piece **pieces_, Alerte *alerte_)</div><div class="ttdoc">Mutatuer : récupère le pointeur du tableau de pieces créé dans jeu.</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:117</div></div>
+<div class="ttc" id="aclass_graphisme_html_ae4524829689cb2cbaa9c5b0cb8668d15"><div class="ttname"><a href="class_graphisme.html#ae4524829689cb2cbaa9c5b0cb8668d15">Graphisme::Afficher_caracteristique</a></div><div class="ttdeci">void Afficher_caracteristique(Personnage *p_sel)</div><div class="ttdoc">Affiche les caracteristiques d'un personnage.</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:397</div></div>
+<div class="ttc" id="aclass_graphisme_html_a08790b893d5cb9de09072152cdd9d5f8"><div class="ttname"><a href="class_graphisme.html#a08790b893d5cb9de09072152cdd9d5f8">Graphisme::sautligne</a></div><div class="ttdeci">SDL_Texture * sautligne(string str, bool taille_fixe)</div><div class="ttdoc">retourne une texture à partir d'un string ajouter un '/' pour sauter une ligne</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:427</div></div>
+<div class="ttc" id="aclass_graphisme_html_a5f51227484ffe755467874945c458215"><div class="ttname"><a href="class_graphisme.html#a5f51227484ffe755467874945c458215">Graphisme::Afficher_stat</a></div><div class="ttdeci">void Afficher_stat(Stat &amp;stat, int fps, bool inv)</div><div class="ttdoc">Affiche les stats en haut de l'écran.</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:300</div></div>
+<div class="ttc" id="aclass_mouvement_html"><div class="ttname"><a href="class_mouvement.html">Mouvement</a></div><div class="ttdoc">Mouvement gère le déplacement des personnages.</div><div class="ttdef"><b>Definition:</b> mouvement.h:13</div></div>
+<div class="ttc" id="aclass_stat_html"><div class="ttname"><a href="class_stat.html">Stat</a></div><div class="ttdoc">gère les statistiques de la partie</div><div class="ttdef"><b>Definition:</b> stat.h:24</div></div>
+<div class="ttc" id="aclass_graphisme_html_ae868ba52f81f293c61ebf27808d023c8"><div class="ttname"><a href="class_graphisme.html#ae868ba52f81f293c61ebf27808d023c8">Graphisme::Afficher_cursor</a></div><div class="ttdeci">void Afficher_cursor(int y, int x)</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:509</div></div>
+<div class="ttc" id="aclass_graphisme_html_ae3fd9da9811e295d0671e89f6ba33b8f"><div class="ttname"><a href="class_graphisme.html#ae3fd9da9811e295d0671e89f6ba33b8f">Graphisme::Afficher_perso</a></div><div class="ttdeci">void Afficher_perso(vector&lt; Personnage * &gt; v, Mouvement &amp;mouv)</div><div class="ttdoc">Affiche les personnages dehors et en mouvement.</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:376</div></div>
+<div class="ttc" id="aconstruction_8h_html"><div class="ttname"><a href="construction_8h.html">construction.h</a></div></div>
+<div class="ttc" id="astat_8h_html"><div class="ttname"><a href="stat_8h.html">stat.h</a></div></div>
+<div class="ttc" id="aclass_graphisme_html_a4563e860bcd73cf59f9edc4e9bb49404"><div class="ttname"><a href="class_graphisme.html#a4563e860bcd73cf59f9edc4e9bb49404">Graphisme::Affichage_jeu</a></div><div class="ttdeci">void Affichage_jeu(Construction &amp;batiment, SDL_Rect *tab)</div><div class="ttdoc">Affiche les salles et les personnages à l'interieur.</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:155</div></div>
+<div class="ttc" id="aclass_graphisme_html_a73ec340c2ae96f16f767adf26711c91f"><div class="ttname"><a href="class_graphisme.html#a73ec340c2ae96f16f767adf26711c91f">Graphisme::Afficher_contour</a></div><div class="ttdeci">void Afficher_contour(Construction &amp;batiment, SDL_Rect *tab)</div><div class="ttdoc">Affiche les contours de chaque piece.</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:213</div></div>
+<div class="ttc" id="aclass_graphisme_html_ae613163200a89078dbdbd585b4b70603"><div class="ttname"><a href="class_graphisme.html#ae613163200a89078dbdbd585b4b70603">Graphisme::Afficher_menu_construction</a></div><div class="ttdeci">void Afficher_menu_construction(Construction &amp;batiment)</div><div class="ttdoc">Affiche les salles qui construisible en bleu et non construisible en rouge.</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:286</div></div>
+<div class="ttc" id="aclass_graphisme_html_a0c4c9b70a573a1f5af4ae5175411523f"><div class="ttname"><a href="class_graphisme.html#a0c4c9b70a573a1f5af4ae5175411523f">Graphisme::Afficher_alerte</a></div><div class="ttdeci">void Afficher_alerte()</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:474</div></div>
+<div class="ttc" id="aclass_personnage_html"><div class="ttname"><a href="class_personnage.html">Personnage</a></div><div class="ttdoc">Personnage regroupe toutes les caracteristiques et fonctions nécéssaire à un personnage dans le jeu.</div><div class="ttdef"><b>Definition:</b> Personnage.h:14</div></div>
+<div class="ttc" id="aclass_graphisme_html_a36ec6e5e86512a87d2b02b4c54e5eb17"><div class="ttname"><a href="class_graphisme.html#a36ec6e5e86512a87d2b02b4c54e5eb17">Graphisme::Afficher_inventaire</a></div><div class="ttdeci">void Afficher_inventaire(Inventaire &amp;inv)</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:491</div></div>
+<div class="ttc" id="aclass_graphisme_html_a9f47bd965473bb534238402f757076ea"><div class="ttname"><a href="class_graphisme.html#a9f47bd965473bb534238402f757076ea">Graphisme::setTexturePersonnage</a></div><div class="ttdeci">void setTexturePersonnage()</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:121</div></div>
+<div class="ttc" id="aclass_graphisme_html_a79b270eceef7542bc14fea81c46dce87"><div class="ttname"><a href="class_graphisme.html#a79b270eceef7542bc14fea81c46dce87">Graphisme::Afficher_choix</a></div><div class="ttdeci">void Afficher_choix()</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:505</div></div>
+<div class="ttc" id="aclass_graphisme_html_a42cb7aa7984d9de88816199f0e163689"><div class="ttname"><a href="class_graphisme.html#a42cb7aa7984d9de88816199f0e163689">Graphisme::Load</a></div><div class="ttdeci">SDL_Texture * Load(const char *chemin)</div><div class="ttdoc">Mutatuer : créé une texture à partir d'une image.</div><div class="ttdef"><b>Definition:</b> graphisme.cpp:135</div></div>
+<div class="ttc" id="aclass_inventaire_html"><div class="ttname"><a href="class_inventaire.html">Inventaire</a></div><div class="ttdef"><b>Definition:</b> inventaire.h:13</div></div>
+<div class="ttc" id="aclass_piece_html"><div class="ttname"><a href="class_piece.html">Piece</a></div><div class="ttdoc">pieces composant le jeu</div><div class="ttdef"><b>Definition:</b> piece.h:15</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

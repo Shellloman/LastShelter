@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UpTower: Référence de la classe Stat</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UpTower
+   </div>
+   <div id="projectbrief">Création d&#39;un jeu de gestion pour l&#39;UE LIFAP4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Recherche');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="class_stat-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe Stat</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>gère les statistiques de la partie  
+ <a href="class_stat.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="stat_8h_source.html">stat.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:ae928e5dc2e02aa907902d4f3b369ab4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#ae928e5dc2e02aa907902d4f3b369ab4a">Stat</a> ()</td></tr>
+<tr class="separator:ae928e5dc2e02aa907902d4f3b369ab4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b94ea8a62ac4c80fc300fcba806b727"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a6b94ea8a62ac4c80fc300fcba806b727">update</a> (int perso_mouv, int t_inv)</td></tr>
+<tr class="memdesc:a6b94ea8a62ac4c80fc300fcba806b727"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction appelé dans la boucle principal toutes les secondes. Elle baisse ou augmentes Les statistiques en fonctions du nombre de personnages et de la production de chaque piece  <a href="class_stat.html#a6b94ea8a62ac4c80fc300fcba806b727">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6b94ea8a62ac4c80fc300fcba806b727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68490edb55a75d31efd5aa6ec5c3c96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#ac68490edb55a75d31efd5aa6ec5c3c96">setPtr</a> (<a class="el" href="class_piece.html">Piece</a> **pieces_, <a class="el" href="class_alerte.html">Alerte</a> *alerte_)</td></tr>
+<tr class="memdesc:ac68490edb55a75d31efd5aa6ec5c3c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutatuer : récupère le pointeur du tableau de pieces créé dans jeu.  <a href="class_stat.html#ac68490edb55a75d31efd5aa6ec5c3c96">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac68490edb55a75d31efd5aa6ec5c3c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3de1c2ca7fc48a34451ca6aa8e2d083"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#ae3de1c2ca7fc48a34451ca6aa8e2d083">setStat</a> (int <a class="el" href="class_stat.html#a560957baa17e89679d8c14e9720f73a8">save</a>, SDL_Rect tab[9 *17])</td></tr>
+<tr class="memdesc:ae3de1c2ca7fc48a34451ca6aa8e2d083"><td class="mdescLeft">&#160;</td><td class="mdescRight">récupère la sauvegarde à partir d'un fichier  <a href="class_stat.html#ae3de1c2ca7fc48a34451ca6aa8e2d083">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae3de1c2ca7fc48a34451ca6aa8e2d083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a560957baa17e89679d8c14e9720f73a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a560957baa17e89679d8c14e9720f73a8">save</a> (int save)</td></tr>
+<tr class="memdesc:a560957baa17e89679d8c14e9720f73a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">sauvegarde la partie actuelle dans le fichier numéro 'save'  <a href="class_stat.html#a560957baa17e89679d8c14e9720f73a8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a560957baa17e89679d8c14e9720f73a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7991045d7c2b16ef8d36704d576e7389"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a7991045d7c2b16ef8d36704d576e7389">getFerraille</a> () const</td></tr>
+<tr class="separator:a7991045d7c2b16ef8d36704d576e7389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0731b022917b7c31165cfaaa7e25e785"><td class="memItemLeft" align="right" valign="top">int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a0731b022917b7c31165cfaaa7e25e785">getObjFerraille</a> ()</td></tr>
+<tr class="separator:a0731b022917b7c31165cfaaa7e25e785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09be9f03820236293c00b3a9980b1983"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a09be9f03820236293c00b3a9980b1983">getEau</a> () const</td></tr>
+<tr class="separator:a09be9f03820236293c00b3a9980b1983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fe3caff02f89d11ec6d78361e88d70"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a52fe3caff02f89d11ec6d78361e88d70">getEnergie</a> () const</td></tr>
+<tr class="separator:a52fe3caff02f89d11ec6d78361e88d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86e98454c60cb5c14eb362452fc0e3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#aa86e98454c60cb5c14eb362452fc0e3e">getNourriture</a> () const</td></tr>
+<tr class="separator:aa86e98454c60cb5c14eb362452fc0e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af64f061eb33b33781e67008b36c8fcb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#af64f061eb33b33781e67008b36c8fcb2">getJoie</a> () const</td></tr>
+<tr class="separator:af64f061eb33b33781e67008b36c8fcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f635d0b2857b357504cca39e6e24958"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a0f635d0b2857b357504cca39e6e24958">getNbPerso</a> () const</td></tr>
+<tr class="separator:a0f635d0b2857b357504cca39e6e24958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9114131e127814eb7b311e8c41114d96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a9114131e127814eb7b311e8c41114d96">getNbPersoMax</a> () const</td></tr>
+<tr class="separator:a9114131e127814eb7b311e8c41114d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8608c40a63270633193409572a5df2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#aef8608c40a63270633193409572a5df2">getLastUpdate</a> () const</td></tr>
+<tr class="separator:aef8608c40a63270633193409572a5df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4517ecbfb5d6ee80bdd0db4fe59fa28"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#ac4517ecbfb5d6ee80bdd0db4fe59fa28">getTailleInv</a> () const</td></tr>
+<tr class="separator:ac4517ecbfb5d6ee80bdd0db4fe59fa28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e753b15d4dc7bc5b6b2c6f3c82e325"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a90e753b15d4dc7bc5b6b2c6f3c82e325">getBeau</a> () const</td></tr>
+<tr class="separator:a90e753b15d4dc7bc5b6b2c6f3c82e325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70ec9d80f8643b4c0b9ac5ed65da4e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#ac70ec9d80f8643b4c0b9ac5ed65da4e3">getBenergie</a> () const</td></tr>
+<tr class="separator:ac70ec9d80f8643b4c0b9ac5ed65da4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c803a4e138a4b30a37677f6f00cf1a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a24c803a4e138a4b30a37677f6f00cf1a">getBnourriture</a> () const</td></tr>
+<tr class="separator:a24c803a4e138a4b30a37677f6f00cf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a847bf6d66f5f904ec3235bf0b13b6fb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a847bf6d66f5f904ec3235bf0b13b6fb9">getBjoie</a> () const</td></tr>
+<tr class="separator:a847bf6d66f5f904ec3235bf0b13b6fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78ef21f849b7f7f9b08f75c776b38f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#ab78ef21f849b7f7f9b08f75c776b38f9">setFeraille</a> (int value)</td></tr>
+<tr class="separator:ab78ef21f849b7f7f9b08f75c776b38f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ebfc1a39a7f46b48e51cb8fdc85223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#ae0ebfc1a39a7f46b48e51cb8fdc85223">setLastUpdate</a> (int value)</td></tr>
+<tr class="separator:ae0ebfc1a39a7f46b48e51cb8fdc85223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a52c9d183d1aab423a80f833f6fd5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a66a52c9d183d1aab423a80f833f6fd5d">setNbPerso</a> (int value)</td></tr>
+<tr class="separator:a66a52c9d183d1aab423a80f833f6fd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63e1d000391f1067570c76367093d59f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a63e1d000391f1067570c76367093d59f">setNbPersoMax</a> (int value)</td></tr>
+<tr class="separator:a63e1d000391f1067570c76367093d59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4857c3354fd29ba1cd5680b853767f5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stat.html#a4857c3354fd29ba1cd5680b853767f5b">afficher</a> () const</td></tr>
+<tr class="separator:a4857c3354fd29ba1cd5680b853767f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>gère les statistiques de la partie </p>
+<p>cette classe gère les différentes statistiques du jeu, eau ,energie , ect ainsi que le nombre maximum de joueurs et les sauvegardes. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="ae928e5dc2e02aa907902d4f3b369ab4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae928e5dc2e02aa907902d4f3b369ab4a">&#9670;&nbsp;</a></span>Stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Stat::Stat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a4857c3354fd29ba1cd5680b853767f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4857c3354fd29ba1cd5680b853767f5b">&#9670;&nbsp;</a></span>afficher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stat::afficher </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90e753b15d4dc7bc5b6b2c6f3c82e325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e753b15d4dc7bc5b6b2c6f3c82e325">&#9670;&nbsp;</a></span>getBeau()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Stat::getBeau </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac70ec9d80f8643b4c0b9ac5ed65da4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70ec9d80f8643b4c0b9ac5ed65da4e3">&#9670;&nbsp;</a></span>getBenergie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Stat::getBenergie </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a847bf6d66f5f904ec3235bf0b13b6fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a847bf6d66f5f904ec3235bf0b13b6fb9">&#9670;&nbsp;</a></span>getBjoie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Stat::getBjoie </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24c803a4e138a4b30a37677f6f00cf1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c803a4e138a4b30a37677f6f00cf1a">&#9670;&nbsp;</a></span>getBnourriture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Stat::getBnourriture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09be9f03820236293c00b3a9980b1983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09be9f03820236293c00b3a9980b1983">&#9670;&nbsp;</a></span>getEau()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Stat::getEau </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52fe3caff02f89d11ec6d78361e88d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52fe3caff02f89d11ec6d78361e88d70">&#9670;&nbsp;</a></span>getEnergie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Stat::getEnergie </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7991045d7c2b16ef8d36704d576e7389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7991045d7c2b16ef8d36704d576e7389">&#9670;&nbsp;</a></span>getFerraille()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Stat::getFerraille </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af64f061eb33b33781e67008b36c8fcb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af64f061eb33b33781e67008b36c8fcb2">&#9670;&nbsp;</a></span>getJoie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Stat::getJoie </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef8608c40a63270633193409572a5df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef8608c40a63270633193409572a5df2">&#9670;&nbsp;</a></span>getLastUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Stat::getLastUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f635d0b2857b357504cca39e6e24958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f635d0b2857b357504cca39e6e24958">&#9670;&nbsp;</a></span>getNbPerso()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Stat::getNbPerso </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9114131e127814eb7b311e8c41114d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9114131e127814eb7b311e8c41114d96">&#9670;&nbsp;</a></span>getNbPersoMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Stat::getNbPersoMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa86e98454c60cb5c14eb362452fc0e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa86e98454c60cb5c14eb362452fc0e3e">&#9670;&nbsp;</a></span>getNourriture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Stat::getNourriture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0731b022917b7c31165cfaaa7e25e785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0731b022917b7c31165cfaaa7e25e785">&#9670;&nbsp;</a></span>getObjFerraille()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int &amp; Stat::getObjFerraille </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4517ecbfb5d6ee80bdd0db4fe59fa28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4517ecbfb5d6ee80bdd0db4fe59fa28">&#9670;&nbsp;</a></span>getTailleInv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Stat::getTailleInv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a560957baa17e89679d8c14e9720f73a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a560957baa17e89679d8c14e9720f73a8">&#9670;&nbsp;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stat::save </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>save</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sauvegarde la partie actuelle dans le fichier numéro 'save' </p>
+
+</div>
+</div>
+<a id="ab78ef21f849b7f7f9b08f75c776b38f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78ef21f849b7f7f9b08f75c776b38f9">&#9670;&nbsp;</a></span>setFeraille()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stat::setFeraille </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0ebfc1a39a7f46b48e51cb8fdc85223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ebfc1a39a7f46b48e51cb8fdc85223">&#9670;&nbsp;</a></span>setLastUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stat::setLastUpdate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66a52c9d183d1aab423a80f833f6fd5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a52c9d183d1aab423a80f833f6fd5d">&#9670;&nbsp;</a></span>setNbPerso()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stat::setNbPerso </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63e1d000391f1067570c76367093d59f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63e1d000391f1067570c76367093d59f">&#9670;&nbsp;</a></span>setNbPersoMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stat::setNbPersoMax </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac68490edb55a75d31efd5aa6ec5c3c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac68490edb55a75d31efd5aa6ec5c3c96">&#9670;&nbsp;</a></span>setPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stat::setPtr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_piece.html">Piece</a> **&#160;</td>
+          <td class="paramname"><em>pieces_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_alerte.html">Alerte</a> *&#160;</td>
+          <td class="paramname"><em>alerte_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mutatuer : récupère le pointeur du tableau de pieces créé dans jeu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pieces_</td><td>: pointeur du tableau de pieces </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae3de1c2ca7fc48a34451ca6aa8e2d083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3de1c2ca7fc48a34451ca6aa8e2d083">&#9670;&nbsp;</a></span>setStat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stat::setStat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>save</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect&#160;</td>
+          <td class="paramname"><em>tab</em>[9 *17]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>récupère la sauvegarde à partir d'un fichier </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">save</td><td>: numéro de la sauvegarde à utiliser </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6b94ea8a62ac4c80fc300fcba806b727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b94ea8a62ac4c80fc300fcba806b727">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stat::update </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>perso_mouv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t_inv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction appelé dans la boucle principal toutes les secondes. Elle baisse ou augmentes Les statistiques en fonctions du nombre de personnages et de la production de chaque piece </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">perso_mouv</td><td>: nombre de personnages en mouvement </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li>src/outils/<a class="el" href="stat_8h_source.html">stat.h</a></li>
+<li>src/outils/<a class="el" href="stat_8cpp.html">stat.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

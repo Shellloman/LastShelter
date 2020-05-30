@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UpTower:  Fichier source de src/personnages/inventaire.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UpTower
+   </div>
+   <div id="projectbrief">Création d&#39;un jeu de gestion pour l&#39;UE LIFAP4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Recherche');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f31b072cdcd5ea17a83064bab6ce1e32.html">personnages</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">inventaire.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="inventaire_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INVENTAIRE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define INVENTAIRE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../outils/alerte.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="equipement_8h.html">equipement.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_inventaire.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_inventaire.html">Inventaire</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    vector&lt;Equipement*&gt; equip;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::string nomsArme[5];</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::string nomsArmure[3];</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_alerte.html">Alerte</a> * alerte;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_inventaire.html#af8a3d14c40a06b0f0687006f8355b5b1">Inventaire</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_inventaire.html#a1ba6b3ac5981e7d2af4dd0ee17bda990">addEquipement</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_inventaire.html#a90bfdf384d807762c71cd0011f223821">supEquipement</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_inventaire.html#a064687eeb1e6e53f6465c482a4bed9d4">recupererEquipement</a>(<a class="code" href="class_equipement.html">Equipement</a> * e);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_inventaire.html#a81858685e52b9de046770bf8ac6f6c22">setPtr</a>(<a class="code" href="class_alerte.html">Alerte</a> * alerte_);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::string <a class="code" href="class_inventaire.html#ab8a5ca51f3a8cef2424d1cc56b65da2c">getString</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_equipement.html">Equipement</a>* <a class="code" href="class_inventaire.html#a6b34bfffc8984f296674bf935028ccaa">getEquipement</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_inventaire.html#a9bcadae6c6cfb30d92c56680630127dc">getNombre</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aequipement_8h_html"><div class="ttname"><a href="equipement_8h.html">equipement.h</a></div></div>
+<div class="ttc" id="aclass_inventaire_html_ab8a5ca51f3a8cef2424d1cc56b65da2c"><div class="ttname"><a href="class_inventaire.html#ab8a5ca51f3a8cef2424d1cc56b65da2c">Inventaire::getString</a></div><div class="ttdeci">std::string getString(int i)</div><div class="ttdef"><b>Definition:</b> inventaire.cpp:18</div></div>
+<div class="ttc" id="aclass_inventaire_html_a9bcadae6c6cfb30d92c56680630127dc"><div class="ttname"><a href="class_inventaire.html#a9bcadae6c6cfb30d92c56680630127dc">Inventaire::getNombre</a></div><div class="ttdeci">int getNombre()</div><div class="ttdef"><b>Definition:</b> inventaire.cpp:44</div></div>
+<div class="ttc" id="aclass_inventaire_html_af8a3d14c40a06b0f0687006f8355b5b1"><div class="ttname"><a href="class_inventaire.html#af8a3d14c40a06b0f0687006f8355b5b1">Inventaire::Inventaire</a></div><div class="ttdeci">Inventaire()</div><div class="ttdef"><b>Definition:</b> inventaire.cpp:3</div></div>
+<div class="ttc" id="aclass_inventaire_html_a81858685e52b9de046770bf8ac6f6c22"><div class="ttname"><a href="class_inventaire.html#a81858685e52b9de046770bf8ac6f6c22">Inventaire::setPtr</a></div><div class="ttdeci">void setPtr(Alerte *alerte_)</div><div class="ttdef"><b>Definition:</b> inventaire.cpp:15</div></div>
+<div class="ttc" id="aclass_inventaire_html_a064687eeb1e6e53f6465c482a4bed9d4"><div class="ttname"><a href="class_inventaire.html#a064687eeb1e6e53f6465c482a4bed9d4">Inventaire::recupererEquipement</a></div><div class="ttdeci">void recupererEquipement(Equipement *e)</div><div class="ttdef"><b>Definition:</b> inventaire.cpp:34</div></div>
+<div class="ttc" id="aclass_inventaire_html_a6b34bfffc8984f296674bf935028ccaa"><div class="ttname"><a href="class_inventaire.html#a6b34bfffc8984f296674bf935028ccaa">Inventaire::getEquipement</a></div><div class="ttdeci">Equipement * getEquipement(int i)</div><div class="ttdef"><b>Definition:</b> inventaire.cpp:25</div></div>
+<div class="ttc" id="aclass_alerte_html"><div class="ttname"><a href="class_alerte.html">Alerte</a></div><div class="ttdoc">Alerte affiche les messages d'alerte.</div><div class="ttdef"><b>Definition:</b> alerte.h:16</div></div>
+<div class="ttc" id="aclass_inventaire_html_a1ba6b3ac5981e7d2af4dd0ee17bda990"><div class="ttname"><a href="class_inventaire.html#a1ba6b3ac5981e7d2af4dd0ee17bda990">Inventaire::addEquipement</a></div><div class="ttdeci">void addEquipement()</div><div class="ttdef"><b>Definition:</b> inventaire.cpp:47</div></div>
+<div class="ttc" id="aclass_equipement_html"><div class="ttname"><a href="class_equipement.html">Equipement</a></div><div class="ttdoc">Mouvement gère le déplacement des personnages.</div><div class="ttdef"><b>Definition:</b> equipement.h:13</div></div>
+<div class="ttc" id="aclass_inventaire_html_a90bfdf384d807762c71cd0011f223821"><div class="ttname"><a href="class_inventaire.html#a90bfdf384d807762c71cd0011f223821">Inventaire::supEquipement</a></div><div class="ttdeci">void supEquipement(int i)</div><div class="ttdef"><b>Definition:</b> inventaire.cpp:39</div></div>
+<div class="ttc" id="aclass_inventaire_html"><div class="ttname"><a href="class_inventaire.html">Inventaire</a></div><div class="ttdef"><b>Definition:</b> inventaire.h:13</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

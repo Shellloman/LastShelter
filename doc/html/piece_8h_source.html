@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UpTower:  Fichier source de src/pieces/piece.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UpTower
+   </div>
+   <div id="projectbrief">Création d&#39;un jeu de gestion pour l&#39;UE LIFAP4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Recherche');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34caaf82b25d83e62b370a0c6fbb4fdf.html">pieces</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">piece.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="piece_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PIECE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PIECE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../constante.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../personnages/Personnage.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_piece.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_piece.html">Piece</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_piece.html#a97d61c9e42873e2274620c91178e879b">   21</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_piece.html#a97d61c9e42873e2274620c91178e879b">y</a>,x,anim;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_piece.html#a053532ccb316c75a4fc2d68089261af9">   25</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_piece.html#a053532ccb316c75a4fc2d68089261af9">niveau</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_piece.html#ae10b209c8b47ee0fe24383a6e1fe7473">   29</a></span>&#160;    <a class="code" href="class_personnage.html">Personnage</a> **<a class="code" href="class_piece.html#ae10b209c8b47ee0fe24383a6e1fe7473">tab</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_piece.html#a573d64ebf179427574e4fbc2734daa13">   33</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_piece.html#a573d64ebf179427574e4fbc2734daa13">DimX</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_piece.html#a6777e70a121a71fe869b34c207d710e0">   37</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_piece.html#a6777e70a121a71fe869b34c207d710e0">NbPerso</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_piece.html#a430ffdf92cc1b19704b09dc94d0a2c9e">   41</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_piece.html#a430ffdf92cc1b19704b09dc94d0a2c9e">Texture</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_piece.html#a7660b727b8ea023017aa06645bfad20c">   45</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_piece.html#a7660b727b8ea023017aa06645bfad20c">selection</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_piece.html#ade6321586b9faf69549aa0e76e99fdc5">   52</a></span>&#160;    <span class="keywordtype">bool</span> allumer,asc,<a class="code" href="class_piece.html#ade6321586b9faf69549aa0e76e99fdc5">destructible</a>,agrandissable;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_piece.html#a0a04797a294ca8d4dc9dfd09cb565100">   56</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_piece.html#a0a04797a294ca8d4dc9dfd09cb565100">type</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_piece.html#af2922175b74a64df3002f231b6194479">   58</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> prix[3];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_piece.html">Piece</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="class_piece.html">Piece</a>(<span class="keywordtype">int</span> y_,<span class="keywordtype">int</span> x_,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> niveau_ = 1,<span class="keywordtype">bool</span> asc_ = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setAllumer(<span class="keywordtype">bool</span> elec);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> addPerso(<a class="code" href="class_personnage.html">Personnage</a> * p,<span class="keywordtype">int</span> py,<span class="keywordtype">int</span> px);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="class_personnage.html">Personnage</a>* getPerso(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="class_personnage.html">Personnage</a> * persoPresent(<span class="keywordtype">int</span> y,<span class="keywordtype">int</span> x);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> suppPerso(<a class="code" href="class_personnage.html">Personnage</a>*p);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getTexture() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setTexture(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tex);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> setSelection(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getSelection() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">void</span> setYX(<span class="keywordtype">int</span> y_,<span class="keywordtype">int</span> x_);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">int</span> getX() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">int</span> getY() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getNiveau() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> setNiveau(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> niv);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getDimX() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> setDimX(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> DimX_);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getProduction() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">bool</span> isAsc() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> setAsc();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> setDest(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">bool</span> getDest() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">void</span> setAgran(<span class="keywordtype">bool</span> b);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">bool</span> getAgran() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getType() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getNbPerso() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">void</span> setNbPerso(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">void</span> setAnim(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">int</span> getAnim() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getPrix(<span class="keywordtype">int</span> value) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_piece.html">Piece</a>();</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">void</span> testRegressionPiece();</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;};</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_piece_html_a430ffdf92cc1b19704b09dc94d0a2c9e"><div class="ttname"><a href="class_piece.html#a430ffdf92cc1b19704b09dc94d0a2c9e">Piece::Texture</a></div><div class="ttdeci">unsigned int Texture</div><div class="ttdoc">texture dae la piece (utilise: constante.h)</div><div class="ttdef"><b>Definition:</b> piece.h:41</div></div>
+<div class="ttc" id="aclass_piece_html_a97d61c9e42873e2274620c91178e879b"><div class="ttname"><a href="class_piece.html#a97d61c9e42873e2274620c91178e879b">Piece::y</a></div><div class="ttdeci">int y</div><div class="ttdoc">position verticale et horizontale de la piece</div><div class="ttdef"><b>Definition:</b> piece.h:21</div></div>
+<div class="ttc" id="aclass_piece_html_a7660b727b8ea023017aa06645bfad20c"><div class="ttname"><a href="class_piece.html#a7660b727b8ea023017aa06645bfad20c">Piece::selection</a></div><div class="ttdeci">unsigned int selection</div><div class="ttdoc">entier positif representent la selecetion du menu de contruction</div><div class="ttdef"><b>Definition:</b> piece.h:45</div></div>
+<div class="ttc" id="aclass_piece_html_ade6321586b9faf69549aa0e76e99fdc5"><div class="ttname"><a href="class_piece.html#ade6321586b9faf69549aa0e76e99fdc5">Piece::destructible</a></div><div class="ttdeci">bool destructible</div><div class="ttdef"><b>Definition:</b> piece.h:52</div></div>
+<div class="ttc" id="aclass_piece_html_a573d64ebf179427574e4fbc2734daa13"><div class="ttname"><a href="class_piece.html#a573d64ebf179427574e4fbc2734daa13">Piece::DimX</a></div><div class="ttdeci">unsigned int DimX</div><div class="ttdoc">largeur de la piece</div><div class="ttdef"><b>Definition:</b> piece.h:33</div></div>
+<div class="ttc" id="aclass_piece_html_a6777e70a121a71fe869b34c207d710e0"><div class="ttname"><a href="class_piece.html#a6777e70a121a71fe869b34c207d710e0">Piece::NbPerso</a></div><div class="ttdeci">unsigned int NbPerso</div><div class="ttdoc">nombre de personnage dans la piece</div><div class="ttdef"><b>Definition:</b> piece.h:37</div></div>
+<div class="ttc" id="aclass_piece_html_ae10b209c8b47ee0fe24383a6e1fe7473"><div class="ttname"><a href="class_piece.html#ae10b209c8b47ee0fe24383a6e1fe7473">Piece::tab</a></div><div class="ttdeci">Personnage ** tab</div><div class="ttdoc">tableau de pointeur contenant les personnages de la piece</div><div class="ttdef"><b>Definition:</b> piece.h:29</div></div>
+<div class="ttc" id="aclass_piece_html_a053532ccb316c75a4fc2d68089261af9"><div class="ttname"><a href="class_piece.html#a053532ccb316c75a4fc2d68089261af9">Piece::niveau</a></div><div class="ttdeci">unsigned int niveau</div><div class="ttdoc">niveau de la piece</div><div class="ttdef"><b>Definition:</b> piece.h:25</div></div>
+<div class="ttc" id="aclass_piece_html_a0a04797a294ca8d4dc9dfd09cb565100"><div class="ttname"><a href="class_piece.html#a0a04797a294ca8d4dc9dfd09cb565100">Piece::type</a></div><div class="ttdeci">unsigned int type</div><div class="ttdoc">entier positif qui exprime le type production de la piece (utilise: constante.h)</div><div class="ttdef"><b>Definition:</b> piece.h:56</div></div>
+<div class="ttc" id="aclass_personnage_html"><div class="ttname"><a href="class_personnage.html">Personnage</a></div><div class="ttdoc">Personnage regroupe toutes les caracteristiques et fonctions nécéssaire à un personnage dans le jeu.</div><div class="ttdef"><b>Definition:</b> Personnage.h:14</div></div>
+<div class="ttc" id="aclass_piece_html"><div class="ttname"><a href="class_piece.html">Piece</a></div><div class="ttdoc">pieces composant le jeu</div><div class="ttdef"><b>Definition:</b> piece.h:15</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

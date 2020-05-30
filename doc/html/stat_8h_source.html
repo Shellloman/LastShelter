@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UpTower:  Fichier source de src/outils/stat.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UpTower
+   </div>
+   <div id="projectbrief">Création d&#39;un jeu de gestion pour l&#39;UE LIFAP4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Recherche');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7d8cee288858badfd992cdfe4c81526f.html">outils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">stat.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stat_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef STAT_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define STAT_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../pieces/dortoir.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../pieces/salon.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../pieces/milice.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../pieces/infirmerie.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../pieces/eaupotable.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../pieces/reacteur.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../pieces/refectoire.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../pieces/atelier.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="alerte_8h.html">alerte.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../constante.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_rect.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_stat.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_stat.html">Stat</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_piece.html">Piece</a> **pieces;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_alerte.html">Alerte</a>* alerte;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> ferraille;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> eau;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> energie;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> nourriture;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> joie;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> nbPerso;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> nbPersoMax;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> lastUpdate;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> taille_inv;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> beau,benergie,bnourriture,bjoie;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_stat.html#ae928e5dc2e02aa907902d4f3b369ab4a">Stat</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stat.html#a6b94ea8a62ac4c80fc300fcba806b727">update</a>(<span class="keywordtype">int</span> perso_mouv,<span class="keywordtype">int</span> t_inv);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stat.html#ac68490edb55a75d31efd5aa6ec5c3c96">setPtr</a>(<a class="code" href="class_piece.html">Piece</a> **pieces_,<a class="code" href="class_alerte.html">Alerte</a>* alerte_);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stat.html#ae3de1c2ca7fc48a34451ca6aa8e2d083">setStat</a>(<span class="keywordtype">int</span> <a class="code" href="class_stat.html#a560957baa17e89679d8c14e9720f73a8">save</a>,SDL_Rect tab[9*17]);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stat.html#a560957baa17e89679d8c14e9720f73a8">save</a>(<span class="keywordtype">int</span> <a class="code" href="class_stat.html#a560957baa17e89679d8c14e9720f73a8">save</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_stat.html#a7991045d7c2b16ef8d36704d576e7389">getFerraille</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> &amp;<a class="code" href="class_stat.html#a0731b022917b7c31165cfaaa7e25e785">getObjFerraille</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_stat.html#a09be9f03820236293c00b3a9980b1983">getEau</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_stat.html#a52fe3caff02f89d11ec6d78361e88d70">getEnergie</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_stat.html#aa86e98454c60cb5c14eb362452fc0e3e">getNourriture</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_stat.html#af64f061eb33b33781e67008b36c8fcb2">getJoie</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_stat.html#a0f635d0b2857b357504cca39e6e24958">getNbPerso</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_stat.html#a9114131e127814eb7b311e8c41114d96">getNbPersoMax</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_stat.html#aef8608c40a63270633193409572a5df2">getLastUpdate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_stat.html#ac4517ecbfb5d6ee80bdd0db4fe59fa28">getTailleInv</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_stat.html#a90e753b15d4dc7bc5b6b2c6f3c82e325">getBeau</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_stat.html#ac70ec9d80f8643b4c0b9ac5ed65da4e3">getBenergie</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_stat.html#a24c803a4e138a4b30a37677f6f00cf1a">getBnourriture</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_stat.html#a847bf6d66f5f904ec3235bf0b13b6fb9">getBjoie</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stat.html#ab78ef21f849b7f7f9b08f75c776b38f9">setFeraille</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stat.html#ae0ebfc1a39a7f46b48e51cb8fdc85223">setLastUpdate</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stat.html#a66a52c9d183d1aab423a80f833f6fd5d">setNbPerso</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stat.html#a63e1d000391f1067570c76367093d59f">setNbPersoMax</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_stat.html#a4857c3354fd29ba1cd5680b853767f5b">afficher</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_stat_html_ae3de1c2ca7fc48a34451ca6aa8e2d083"><div class="ttname"><a href="class_stat.html#ae3de1c2ca7fc48a34451ca6aa8e2d083">Stat::setStat</a></div><div class="ttdeci">void setStat(int save, SDL_Rect tab[9 *17])</div><div class="ttdoc">récupère la sauvegarde à partir d'un fichier</div><div class="ttdef"><b>Definition:</b> stat.cpp:22</div></div>
+<div class="ttc" id="aclass_stat_html_a560957baa17e89679d8c14e9720f73a8"><div class="ttname"><a href="class_stat.html#a560957baa17e89679d8c14e9720f73a8">Stat::save</a></div><div class="ttdeci">void save(int save)</div><div class="ttdoc">sauvegarde la partie actuelle dans le fichier numéro 'save'</div><div class="ttdef"><b>Definition:</b> stat.cpp:103</div></div>
+<div class="ttc" id="aclass_stat_html_a0f635d0b2857b357504cca39e6e24958"><div class="ttname"><a href="class_stat.html#a0f635d0b2857b357504cca39e6e24958">Stat::getNbPerso</a></div><div class="ttdeci">int getNbPerso() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:245</div></div>
+<div class="ttc" id="aclass_stat_html_a847bf6d66f5f904ec3235bf0b13b6fb9"><div class="ttname"><a href="class_stat.html#a847bf6d66f5f904ec3235bf0b13b6fb9">Stat::getBjoie</a></div><div class="ttdeci">bool getBjoie() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:280</div></div>
+<div class="ttc" id="aalerte_8h_html"><div class="ttname"><a href="alerte_8h.html">alerte.h</a></div></div>
+<div class="ttc" id="aclass_stat_html_a66a52c9d183d1aab423a80f833f6fd5d"><div class="ttname"><a href="class_stat.html#a66a52c9d183d1aab423a80f833f6fd5d">Stat::setNbPerso</a></div><div class="ttdeci">void setNbPerso(int value)</div><div class="ttdef"><b>Definition:</b> stat.cpp:265</div></div>
+<div class="ttc" id="aclass_stat_html_a7991045d7c2b16ef8d36704d576e7389"><div class="ttname"><a href="class_stat.html#a7991045d7c2b16ef8d36704d576e7389">Stat::getFerraille</a></div><div class="ttdeci">int getFerraille() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:227</div></div>
+<div class="ttc" id="aclass_stat_html_af64f061eb33b33781e67008b36c8fcb2"><div class="ttname"><a href="class_stat.html#af64f061eb33b33781e67008b36c8fcb2">Stat::getJoie</a></div><div class="ttdeci">int getJoie() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:242</div></div>
+<div class="ttc" id="aclass_stat_html_aef8608c40a63270633193409572a5df2"><div class="ttname"><a href="class_stat.html#aef8608c40a63270633193409572a5df2">Stat::getLastUpdate</a></div><div class="ttdeci">int getLastUpdate() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:251</div></div>
+<div class="ttc" id="aclass_stat_html_ac70ec9d80f8643b4c0b9ac5ed65da4e3"><div class="ttname"><a href="class_stat.html#ac70ec9d80f8643b4c0b9ac5ed65da4e3">Stat::getBenergie</a></div><div class="ttdeci">bool getBenergie() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:274</div></div>
+<div class="ttc" id="aclass_stat_html_a09be9f03820236293c00b3a9980b1983"><div class="ttname"><a href="class_stat.html#a09be9f03820236293c00b3a9980b1983">Stat::getEau</a></div><div class="ttdeci">int getEau() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:233</div></div>
+<div class="ttc" id="aclass_stat_html_a63e1d000391f1067570c76367093d59f"><div class="ttname"><a href="class_stat.html#a63e1d000391f1067570c76367093d59f">Stat::setNbPersoMax</a></div><div class="ttdeci">void setNbPersoMax(int value)</div><div class="ttdef"><b>Definition:</b> stat.cpp:268</div></div>
+<div class="ttc" id="aclass_stat_html_a52fe3caff02f89d11ec6d78361e88d70"><div class="ttname"><a href="class_stat.html#a52fe3caff02f89d11ec6d78361e88d70">Stat::getEnergie</a></div><div class="ttdeci">int getEnergie() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:236</div></div>
+<div class="ttc" id="aclass_alerte_html"><div class="ttname"><a href="class_alerte.html">Alerte</a></div><div class="ttdoc">Alerte affiche les messages d'alerte.</div><div class="ttdef"><b>Definition:</b> alerte.h:16</div></div>
+<div class="ttc" id="aclass_stat_html_ae0ebfc1a39a7f46b48e51cb8fdc85223"><div class="ttname"><a href="class_stat.html#ae0ebfc1a39a7f46b48e51cb8fdc85223">Stat::setLastUpdate</a></div><div class="ttdeci">void setLastUpdate(int value)</div><div class="ttdef"><b>Definition:</b> stat.cpp:262</div></div>
+<div class="ttc" id="aclass_stat_html_a6b94ea8a62ac4c80fc300fcba806b727"><div class="ttname"><a href="class_stat.html#a6b94ea8a62ac4c80fc300fcba806b727">Stat::update</a></div><div class="ttdeci">void update(int perso_mouv, int t_inv)</div><div class="ttdoc">fonction appelé dans la boucle principal toutes les secondes. Elle baisse ou augmentes Les statistiqu...</div><div class="ttdef"><b>Definition:</b> stat.cpp:137</div></div>
+<div class="ttc" id="aclass_stat_html_a4857c3354fd29ba1cd5680b853767f5b"><div class="ttname"><a href="class_stat.html#a4857c3354fd29ba1cd5680b853767f5b">Stat::afficher</a></div><div class="ttdeci">void afficher() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:217</div></div>
+<div class="ttc" id="aclass_stat_html_ae928e5dc2e02aa907902d4f3b369ab4a"><div class="ttname"><a href="class_stat.html#ae928e5dc2e02aa907902d4f3b369ab4a">Stat::Stat</a></div><div class="ttdeci">Stat()</div><div class="ttdef"><b>Definition:</b> stat.cpp:3</div></div>
+<div class="ttc" id="aclass_stat_html_ac4517ecbfb5d6ee80bdd0db4fe59fa28"><div class="ttname"><a href="class_stat.html#ac4517ecbfb5d6ee80bdd0db4fe59fa28">Stat::getTailleInv</a></div><div class="ttdeci">int getTailleInv() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:254</div></div>
+<div class="ttc" id="aclass_stat_html"><div class="ttname"><a href="class_stat.html">Stat</a></div><div class="ttdoc">gère les statistiques de la partie</div><div class="ttdef"><b>Definition:</b> stat.h:24</div></div>
+<div class="ttc" id="aclass_stat_html_aa86e98454c60cb5c14eb362452fc0e3e"><div class="ttname"><a href="class_stat.html#aa86e98454c60cb5c14eb362452fc0e3e">Stat::getNourriture</a></div><div class="ttdeci">int getNourriture() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:239</div></div>
+<div class="ttc" id="aclass_stat_html_ac68490edb55a75d31efd5aa6ec5c3c96"><div class="ttname"><a href="class_stat.html#ac68490edb55a75d31efd5aa6ec5c3c96">Stat::setPtr</a></div><div class="ttdeci">void setPtr(Piece **pieces_, Alerte *alerte_)</div><div class="ttdoc">Mutatuer : récupère le pointeur du tableau de pieces créé dans jeu.</div><div class="ttdef"><b>Definition:</b> stat.cpp:17</div></div>
+<div class="ttc" id="aclass_stat_html_a9114131e127814eb7b311e8c41114d96"><div class="ttname"><a href="class_stat.html#a9114131e127814eb7b311e8c41114d96">Stat::getNbPersoMax</a></div><div class="ttdeci">int getNbPersoMax() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:248</div></div>
+<div class="ttc" id="aclass_stat_html_a0731b022917b7c31165cfaaa7e25e785"><div class="ttname"><a href="class_stat.html#a0731b022917b7c31165cfaaa7e25e785">Stat::getObjFerraille</a></div><div class="ttdeci">int &amp; getObjFerraille()</div><div class="ttdef"><b>Definition:</b> stat.cpp:230</div></div>
+<div class="ttc" id="aclass_stat_html_a90e753b15d4dc7bc5b6b2c6f3c82e325"><div class="ttname"><a href="class_stat.html#a90e753b15d4dc7bc5b6b2c6f3c82e325">Stat::getBeau</a></div><div class="ttdeci">bool getBeau() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:271</div></div>
+<div class="ttc" id="aclass_stat_html_a24c803a4e138a4b30a37677f6f00cf1a"><div class="ttname"><a href="class_stat.html#a24c803a4e138a4b30a37677f6f00cf1a">Stat::getBnourriture</a></div><div class="ttdeci">bool getBnourriture() const</div><div class="ttdef"><b>Definition:</b> stat.cpp:277</div></div>
+<div class="ttc" id="aclass_stat_html_ab78ef21f849b7f7f9b08f75c776b38f9"><div class="ttname"><a href="class_stat.html#ab78ef21f849b7f7f9b08f75c776b38f9">Stat::setFeraille</a></div><div class="ttdeci">void setFeraille(int value)</div><div class="ttdef"><b>Definition:</b> stat.cpp:258</div></div>
+<div class="ttc" id="aclass_piece_html"><div class="ttname"><a href="class_piece.html">Piece</a></div><div class="ttdoc">pieces composant le jeu</div><div class="ttdef"><b>Definition:</b> piece.h:15</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
